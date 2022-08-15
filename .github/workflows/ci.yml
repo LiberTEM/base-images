@@ -17,6 +17,6 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v3
       with:
-        context: manylinux2014_x86_64
+        context: ./manylinux2014_x86_64
         push: true
         tags: ghcr.io/libertem/manylinux2014_x86_64:latest
