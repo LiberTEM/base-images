@@ -19,4 +19,4 @@ jobs:
       with:
         context: manylinux2014_x86_64
         push: true
-        tags: ghcr.io/LiberTEM/manylinux2014_x86_64:latest
+        tags: ghcr.io/libertem/manylinux2014_x86_64:latest
