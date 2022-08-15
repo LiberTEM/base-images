@@ -8,15 +8,13 @@ jobs:
   linux:
     runs-on: ubuntu-latest
     steps:
-	-
-	  name: Login to GitHub Container Registry
+	- name: Login to GitHub Container Registry
 	  uses: docker/login-action@v1
 	  with:
 		registry: ghcr.io
 		username: ${{ github.actor }}
 		password: ${{ secrets.GITHUB_TOKEN }}
-	-
-	  name: Build and push
+	- name: Build and push
 	  uses: docker/build-push-action@v3
 	  with:
         context: manylinux2014_x86_64
