@@ -20,5 +20,5 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         file: ./manylinux2014_x86_64/Dockerfile
-        push: true
+        push: ${{ github.event_name == 'push' }}
         tags: ghcr.io/libertem/manylinux2014_x86_64:latest
