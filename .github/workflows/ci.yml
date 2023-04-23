@@ -33,10 +33,11 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Setup QEMU
-      uses: docker/setup-qemu-action@v1
+      uses: docker/setup-qemu-action@v2
     - name: Build and push
       uses: docker/build-push-action@v3
       with:
         file: ./manylinux2014_aarch64/Dockerfile
+        playforms: linux/arm64
         push: ${{ github.event_name == 'push' }}
         tags: ghcr.io/libertem/manylinux2014_aarch64:latest
