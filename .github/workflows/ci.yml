@@ -38,6 +38,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         file: ./manylinux2014_aarch64/Dockerfile
-        playforms: linux/arm64
+        platforms: linux/arm64
         push: ${{ github.event_name == 'push' }}
         tags: ghcr.io/libertem/manylinux2014_aarch64:latest
