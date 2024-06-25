@@ -17,7 +17,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build and push
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v6
       with:
         file: ./manylinux2014_x86_64/Dockerfile
         push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -35,7 +35,7 @@ jobs:
     - name: Setup QEMU
       uses: docker/setup-qemu-action@v2
     - name: Build and push
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v6
       with:
         file: ./manylinux2014_aarch64/Dockerfile
         platforms: linux/arm64
