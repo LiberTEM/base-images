@@ -2,8 +2,8 @@
 
 Using the upstream manylinux images, with some additions:
 
-- `manylinux2014_x86_64`
-    - `llvm-toolset-7-clang-devel`
+- `manylinux_2_28_x86_64`
+    - `clang-devel`
 
-- `manylinux2014_aarch64`
-    - `centos-release-scl`, `llvm-toolset-7.0-clang-devel`
+- `manylinux_2_28_aarch64`
+    - `clang-devel`
